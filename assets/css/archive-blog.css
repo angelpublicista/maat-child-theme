@@ -129,4 +129,10 @@
     font-family: 'Nexa Heavy', sans-serif;
     font-size: 15px;
     letter-spacing: 3px;
+    transition: .4s;
+}
+
+.maat-grid-blog-posts__col__link:hover{
+    background-color: #1B1B1B;
+    color: #D9DDDE;
 }

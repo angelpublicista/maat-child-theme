@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="maat-grid-blog-posts">
                 <div class="maat-grid-blog-posts__row">
                     <div class="maat-grid-blog-posts__col">
-                        <img class="maat-grid-blog-posts__col__img" src="http://pruebas-maat.local/wp-content/uploads/2022/09/content-left.png" alt="">
+                        <img class="maat-grid-blog-posts__col__img" src="https://images.pexels.com/photos/13421007/pexels-photo-13421007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
                     </div>
                     <div class="maat-grid-blog-posts__col">
                         <span class="maat-grid-blog-posts__col__etiqueta">Gestión de residuos</span>
@@ -53,7 +53,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                 <div class="maat-grid-blog-posts__row">
                     <div class="maat-grid-blog-posts__col">
-                        <img class="maat-grid-blog-posts__col__img" src="http://pruebas-maat.local/wp-content/uploads/2022/09/content-left.png" alt="">
+                        <img class="maat-grid-blog-posts__col__img" src="https://images.pexels.com/photos/13421007/pexels-photo-13421007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
                     </div>
                     <div class="maat-grid-blog-posts__col">
                         <span class="maat-grid-blog-posts__col__etiqueta">Gestión de residuos</span>
@@ -78,7 +78,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                 <div class="maat-grid-blog-posts__row">
                     <div class="maat-grid-blog-posts__col">
-                        <img class="maat-grid-blog-posts__col__img" src="http://pruebas-maat.local/wp-content/uploads/2022/09/content-left.png" alt="">
+                        <img class="maat-grid-blog-posts__col__img" src="https://images.pexels.com/photos/13421007/pexels-photo-13421007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
                     </div>
                     <div class="maat-grid-blog-posts__col">
                         <span class="maat-grid-blog-posts__col__etiqueta">Gestión de residuos</span>

@@ -13,7 +13,7 @@ if(!function_exists('maat_heading_blog_func')){
         'maat_heading_blog');
 
         ?>
-        <section class="maat-heading-blog" style="background-image: url('http://pruebas-maat.local/wp-content/uploads/2022/09/banner-1.png')">
+        <section class="maat-heading-blog" style="background-image: url('https://images.pexels.com/photos/13421007/pexels-photo-13421007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')">
             <div class="maat-heading-blog__entry">
                 <h1 class="maat-heading-blog__entry__title"><?php echo $atts['title']; ?></h1>
                 <hr class="maat-heading-blog__entry__divider">
