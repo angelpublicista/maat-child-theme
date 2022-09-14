@@ -3,19 +3,39 @@
 }
 
 .maat-heading-blog{
-    height: 410px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 10em 2em 3em 2em;
     margin-top: -100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    position: relative;
+}
+
+.maat-heading-blog::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.maat-heading-blog__entry{
+    position: relative;
 }
 
 .maat-heading-blog__entry__title{
     font-family: 'Nexa Bold', sans-serif;
     font-size: 70px;
     color: white;
+    z-index: 2;
 }
 
 .maat-heading-blog__entry__divider{
@@ -27,7 +47,7 @@
 
 .breadcrumbs{
     margin-top: 2em;
-    text-align: center;
+    text-align: center !important;
     color: white;
     font-family: 'Nexa Regular', sans-serif;
     font-size: 17px;
@@ -135,4 +155,22 @@
 .maat-grid-blog-posts__col__link:hover{
     background-color: #1B1B1B;
     color: #D9DDDE;
+}
+
+@media (max-width: 769px){
+    .maat-grid-blog-posts__row{
+        display: block;
+    }
+    .maat-grid-blog-posts__col{
+        width: 100%;
+    }
+    .maat-heading-blog__entry__title{
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 578px){
+    .maat-heading-blog__entry__title{
+        font-size: 45px;
+    }
 }
