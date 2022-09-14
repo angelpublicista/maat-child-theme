@@ -87,11 +87,26 @@
 }
 
 .maat-grid-blog-posts__col__etiqueta{
-    background-color: #50834B;
     padding: 6px 15px;
     color: white;
     font-family: 'Nexa Regular', sans-serif;
     font-size: 15px;
+}
+
+.etiqueta-verde{
+    background-color: #50834B;
+}
+
+.etiqueta-azul{
+    background-color: #4F80A4;
+}
+
+.etiqueta-roja{
+    background-color: #802920;
+}
+
+.etiqueta-gris{
+    background-color: #6C6C6C;
 }
 
 .maat-grid-blog-posts__col__title{
