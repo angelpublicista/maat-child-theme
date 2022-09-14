@@ -1,0 +1,28 @@
+.maat-blog-main{
+    max-width: 100% !important;
+}
+
+.maat-container{
+    max-width: 1440px !important;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+.maat-grid-blog-posts__row{
+    display: flex;
+}
+
+.maat-grid-blog-posts__col{
+    box-sizing: border-box;
+    padding: 2rem;
+    width: 50%;
+}
+
+.maat-grid-blog-posts__col__img{
+    width: 100%;
+}
+
+.maat-grid-blog-posts__row:nth-child(even){
+    flex-direction: row-reverse;
+}
