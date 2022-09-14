@@ -2,6 +2,45 @@
     max-width: 100% !important;
 }
 
+.maat-heading-blog{
+    height: 410px;
+    margin-top: -100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.maat-heading-blog__entry__title{
+    font-family: 'Nexa Bold', sans-serif;
+    font-size: 70px;
+    color: white;
+}
+
+.maat-heading-blog__entry__divider{
+    width: 45px;
+    height: 1px;
+    color: white;
+    background-color: white;
+}
+
+.breadcrumbs{
+    margin-top: 2em;
+    text-align: center;
+    color: white;
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 17px;
+}
+
+.breadcrumbs .post-root{
+    color: #C0C5C7;
+}
+
+.breadcrumbs span{
+    color: white;
+}
+
 .maat-container{
     max-width: 1440px !important;
     margin-right: auto;
@@ -25,4 +64,69 @@
 
 .maat-grid-blog-posts__row:nth-child(even){
     flex-direction: row-reverse;
+}
+
+.maat-grid-blog-posts__col__etiqueta{
+    background-color: #50834B;
+    padding: 6px 15px;
+    color: white;
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 15px;
+}
+
+.maat-grid-blog-posts__col__title{
+    color: #1B1B1B;
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 29px;
+    margin-top: 1em;
+}
+
+.maat-grid-blog-posts__col__info{
+    display: flex;
+}
+
+.maat-grid-blog-posts__col__info span{
+    display: flex;
+    align-items: center;
+    color: #6C6C6C;
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 15px;
+}
+
+.maat-grid-blog-posts__col__info span i{
+    margin-right: 8px;
+}
+
+.maat-grid-blog-posts__col__info span p{
+    margin: 0px;
+}
+
+.maat-grid-blog-posts__col__info__author{
+    margin-left: 2em;
+}
+
+.maat-grid-blog-posts__col__divider{
+    background-color: #D9DDDE;
+    color: #D9DDDE;
+    border: none;
+    height: 1px;
+}
+
+.maat-grid-blog-posts__col__desc{
+    margin-top: 1em;
+    color: #6C6C6C;
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 17px;
+    margin-bottom: 2em;
+}
+
+.maat-grid-blog-posts__col__link{
+    background-color: white;
+    padding: 20px;
+    color: #1B1B1B;
+    border: 2px solid #1B1B1B;
+    text-decoration: none !important;
+    font-family: 'Nexa Heavy', sans-serif;
+    font-size: 15px;
+    letter-spacing: 3px;
 }

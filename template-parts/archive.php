@@ -28,34 +28,76 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="maat-grid-blog-posts">
                 <div class="maat-grid-blog-posts__row">
                     <div class="maat-grid-blog-posts__col">
-                        <img class="maat-grid-blog-posts__col__img" src="https://images.unsplash.com/photo-1663090236999-4eb90ee3c2ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80" alt="">
+                        <img class="maat-grid-blog-posts__col__img" src="http://pruebas-maat.local/wp-content/uploads/2022/09/content-left.png" alt="">
                     </div>
-
                     <div class="maat-grid-blog-posts__col">
-                        <h2>Title</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ut eos. Delectus quam provident quos libero ad a quidem, amet minus iste neque culpa, eos, iusto suscipit dignissimos alias dolor?</p>
+                        <span class="maat-grid-blog-posts__col__etiqueta">Gestión de residuos</span>
+                        <h2 class="maat-grid-blog-posts__col__title">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</h2>
+                        <div class="maat-grid-blog-posts__col__info">
+                            <span class="maat-grid-blog-posts__col__info__date">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <p>23 agosto, 2022</p>
+                            </span>
+                            <span class="maat-grid-blog-posts__col__info__author">
+                                <i class="fa-regular fa-user"></i>
+                                <p>Por Erick Jiménez</p>
+                            </span>
+                        </div>
+                        <hr class="maat-grid-blog-posts__col__divider">
+                        <p class="maat-grid-blog-posts__col__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dapibus habitant elementum, faucibus luctus quam aliquet justo. Arcu nascetur non in gravida eu porttitor. Tincidunt sed sed sapien integer. Et pulvinar nunc ullamcorper sagittis,</p>
+                        <a href="#" class="maat-grid-blog-posts__col__link">
+                            LEER MÁS
+                        </a>
                     </div>
                 </div>
 
                 <div class="maat-grid-blog-posts__row">
                     <div class="maat-grid-blog-posts__col">
-                        <img class="maat-grid-blog-posts__col__img" src="https://images.unsplash.com/photo-1663090236999-4eb90ee3c2ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80" alt="">
+                        <img class="maat-grid-blog-posts__col__img" src="http://pruebas-maat.local/wp-content/uploads/2022/09/content-left.png" alt="">
                     </div>
-
                     <div class="maat-grid-blog-posts__col">
-                        <h2>Title</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ut eos. Delectus quam provident quos libero ad a quidem, amet minus iste neque culpa, eos, iusto suscipit dignissimos alias dolor?</p>
+                        <span class="maat-grid-blog-posts__col__etiqueta">Gestión de residuos</span>
+                        <h2 class="maat-grid-blog-posts__col__title">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</h2>
+                        <div class="maat-grid-blog-posts__col__info">
+                            <span class="maat-grid-blog-posts__col__info__date">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <p>23 agosto, 2022</p>
+                            </span>
+                            <span class="maat-grid-blog-posts__col__info__author">
+                                <i class="fa-regular fa-user"></i>
+                                <p>Por Erick Jiménez</p>
+                            </span>
+                        </div>
+                        <hr class="maat-grid-blog-posts__col__divider">
+                        <p class="maat-grid-blog-posts__col__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dapibus habitant elementum, faucibus luctus quam aliquet justo. Arcu nascetur non in gravida eu porttitor. Tincidunt sed sed sapien integer. Et pulvinar nunc ullamcorper sagittis,</p>
+                        <a href="#" class="maat-grid-blog-posts__col__link">
+                            LEER MÁS
+                        </a>
                     </div>
                 </div>
 
                 <div class="maat-grid-blog-posts__row">
                     <div class="maat-grid-blog-posts__col">
-                        <img class="maat-grid-blog-posts__col__img" src="https://images.unsplash.com/photo-1663090236999-4eb90ee3c2ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80" alt="">
+                        <img class="maat-grid-blog-posts__col__img" src="http://pruebas-maat.local/wp-content/uploads/2022/09/content-left.png" alt="">
                     </div>
-
                     <div class="maat-grid-blog-posts__col">
-                        <h2>Title</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ut eos. Delectus quam provident quos libero ad a quidem, amet minus iste neque culpa, eos, iusto suscipit dignissimos alias dolor?</p>
+                        <span class="maat-grid-blog-posts__col__etiqueta">Gestión de residuos</span>
+                        <h2 class="maat-grid-blog-posts__col__title">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</h2>
+                        <div class="maat-grid-blog-posts__col__info">
+                            <span class="maat-grid-blog-posts__col__info__date">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <p>23 agosto, 2022</p>
+                            </span>
+                            <span class="maat-grid-blog-posts__col__info__author">
+                                <i class="fa-regular fa-user"></i>
+                                <p>Por Erick Jiménez</p>
+                            </span>
+                        </div>
+                        <hr class="maat-grid-blog-posts__col__divider">
+                        <p class="maat-grid-blog-posts__col__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dapibus habitant elementum, faucibus luctus quam aliquet justo. Arcu nascetur non in gravida eu porttitor. Tincidunt sed sed sapien integer. Et pulvinar nunc ullamcorper sagittis,</p>
+                        <a href="#" class="maat-grid-blog-posts__col__link">
+                            LEER MÁS
+                        </a>
                     </div>
                 </div>
             </div>
