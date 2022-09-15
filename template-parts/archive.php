@@ -25,6 +25,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="maat-container">
         <div class="page-content">
+            <div class="maat-grid-blog-search">
+                <input type="search" name="" id="" placeholder="Ingresa tu busqueda">
+                <button type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="maat-grid-blog-filter">
+                <div class="maat-grid-blog-filter__view">
+                    <span>Mostrando <b>6</b> de <b>100</b></span>
+                </div>
+                <div class="maat-grid-blog-filter__filter">
+                    <span>Ordenar por</span>
+                    <select name="select">
+                        <option value="value1" selected >Más popular</option>
+                        <option value="value2">Value 2</option>
+                        <option value="value3">Value 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="maat-divider">
+                <hr class="maat-grid-blog__divider">
+            </div>
             <div class="maat-grid-blog-posts">
                 <div class="maat-grid-blog-posts__row">
                     <div class="maat-grid-blog-posts__col">
