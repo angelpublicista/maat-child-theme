@@ -11,7 +11,6 @@ if(!function_exists('maat_heading_blog_func')){
         ),
         $atts,
         'maat_heading_blog');
-
         ?>
         <section class="maat-heading-blog" style="background-image: url('https://images.pexels.com/photos/13421007/pexels-photo-13421007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')">
             <div class="maat-heading-blog__entry">

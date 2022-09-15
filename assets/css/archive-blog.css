@@ -38,6 +38,15 @@
     z-index: 2;
 }
 
+.maat-grid-blog-posts__col__title-link{
+    text-decoration: none !important;
+    transition: .3s;
+}
+
+.maat-grid-blog-posts__col__title-link:hover{
+    opacity: .7;
+}
+
 .maat-heading-blog__entry__divider{
     width: 45px;
     height: 1px;
