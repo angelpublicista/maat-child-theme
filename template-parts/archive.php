@@ -123,6 +123,24 @@ if ( ! defined( 'ABSPATH' ) ) {
            
         </div>
 
+        <div class="maat-blog-pagination">
+            <a href="#">
+                <span class="arrows">
+                    <i class="fa-solid fa-angle-left"></i>
+                </span>
+            </a>
+            <p class="maat-blog-pagination__number">
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+            </p>
+            <a href="#">
+                <span class="arrows">
+                    <i class="fa-solid fa-angle-right"></i>
+                </span>
+            </a>
+        </div>
+
         <?php wp_link_pages(); ?>
 
         <?php

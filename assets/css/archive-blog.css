@@ -267,6 +267,49 @@
     border: none;
 }
 
+.maat-blog-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maat-blog-pagination a{
+    color: black;
+    text-decoration: none;
+}
+
+.maat-blog-pagination a:hover .arrows{
+    background-color: black;
+    color: white;
+}
+
+.maat-blog-pagination .arrows{
+    background-color: white;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    border: none !important;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 20px;
+    transition: .4s;
+}
+
+.maat-blog-pagination__number{
+    margin: 0px;
+    display: flex;
+}
+
+.maat-blog-pagination__number a{
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 16px !important;
+    color:#6C6C6C;
+    text-decoration: none;
+    margin: 0px 10px;
+}
+
 @media (max-width: 769px){
     .maat-grid-blog-posts__row{
         display: block;
