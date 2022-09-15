@@ -70,6 +70,7 @@
 
 .maat-grid-blog-posts__row{
     display: flex;
+    margin-bottom: 2rem;
 }
 
 .maat-grid-blog-posts__col{
@@ -107,6 +108,16 @@
 
 .etiqueta-gris{
     background-color: #6C6C6C;
+}
+
+.maat-link-cat{
+    display: inline-block;
+    text-decoration: none !important;
+    transition: .3s;
+}
+
+.maat-link-cat:hover{
+    opacity: .7;
 }
 
 .maat-grid-blog-posts__col__title{
@@ -176,13 +187,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5em;
+    margin: 5em 0;
 }
 
 .maat-grid-blog-search input{
     width: 440px !important;
     border: none !important;
     box-shadow: 0px 4px 40px rgb(0 0 0 / 10%) !important;
+    border-radius: 0px !important;
+    height: 50px;
 }
 
 .maat-grid-blog-search input::placeholder{
@@ -198,6 +211,7 @@
     border-radius: 0px;
     color: white;
     transition: .4s;
+    height: 50px;
 }
 
 .maat-grid-blog-search button:hover{
