@@ -123,6 +123,7 @@
     display: inline-block;
     text-decoration: none !important;
     transition: .3s;
+    padding: 0 !important;
 }
 
 .maat-link-cat:hover{

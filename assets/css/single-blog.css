@@ -1,7 +1,7 @@
 .maat-blog-single-top{
     display: flex;
     margin-top: 2em;
-    padding: 2em;
+    padding: 2em 0;
 }
 .maat-link-cat{
     display: inline-block;
@@ -151,7 +151,7 @@
 }
 
 .maat-single-blog-share{
-    padding: 3em;
+    padding: 3em 0;
     display: block;
 }
 
@@ -204,8 +204,9 @@
 }
 
 .maat-single-blog-pagination{
-    margin: 3em;
+    margin: 3em 0;
     padding: 1em;
+    box-sizing: border-box;
     background-color: #F6F6F6;
     display: flex;
     justify-content: space-between;
@@ -230,11 +231,11 @@
 }
 
 .maat-single-blog-title-related-post{
-    padding: 5em 3em;
+    padding: 5em 0;
+    box-sizing: border-box;
 }
 
 .maat-single-blog-related-post{
-    padding: 0em 3em;
     display: flex;
 }
 
