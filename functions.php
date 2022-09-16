@@ -46,4 +46,23 @@ add_filter('get_the_archive_title', function ($title) {
     return $title;
 });
 
+// Desactiva el editor de bloques en la gestión de widgets.
+add_filter( 'use_widgets_block_editor', '__return_false' );
+
+function dcms_agregar_nueva_zona_widgets() {
+
+	register_sidebar( array(
+		'name'          => 'Maat Sidebar Blog',
+		'id'            => 'id-nueva-zona',
+		'description'   => 'Descripción de la nueva Zona de Widgets',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	
+}
+
+add_action( 'widgets_init', 'dcms_agregar_nueva_zona_widgets' );
+
 require_once('inc/shortcodes/sc-heading-blog.php');

@@ -89,14 +89,8 @@ while ( have_posts() ) :
 			<p class="maat-single-blog-related-post__item__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 		</div>
 	</div>
-	
-	<div class="page-content">
-		
-		<div class="post-tags">
-			<?php the_tags( '<span class="tag-links">' . __( 'Tagged ', 'hello-elementor' ), null, '</span>' ); ?>
-		</div>
-		<?php wp_link_pages(); ?>
-	</div>
+
+	<?php dynamic_sidebar('id-nueva-zona'); ?>
 
 	<?php comments_template(); ?>
 </main>
