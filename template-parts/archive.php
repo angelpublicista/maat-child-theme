@@ -10,7 +10,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <main id="content" class="site-main maat-blog-main" role="main">
-    <?php echo do_shortcode('[maat_heading_blog title="'.get_the_archive_title().'"]'); ?>
+    <?php $archive_title = get_the_archive_title();
+    ?>
+
+    <?php echo do_shortcode('[maat_heading_blog title='.($archive_title).']'); ?>
 
     <div class="maat-container">
         <div class="page-content">
@@ -95,10 +98,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                              }
                             ?>
                             
-                            <a href="<?php the_permalink(); ?>" class="maat-grid-blog-posts__col__title-link">
-                                <h2 class="maat-grid-blog-posts__col__title"><?php the_title(); ?></h2>
-                            </a>
-                            
+                            <h2 class="maat-grid-blog-posts__col__title"><?php the_title(); ?></h2>
                             <div class="maat-grid-blog-posts__col__info">
                                 <span class="maat-grid-blog-posts__col__info__date">
                                     <i class="fa-solid fa-calendar-days"></i>

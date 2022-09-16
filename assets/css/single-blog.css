@@ -1,0 +1,255 @@
+.maat-blog-single-top{
+    display: flex;
+    margin-top: 2em;
+    padding: 2em;
+}
+.maat-link-cat{
+    display: inline-block;
+    text-decoration: none !important;
+    padding: 6px 15px;
+    color: white;
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.maat-link-cat:hover{
+    opacity: .7;
+}
+
+.etiqueta-verde{
+    background-color: #50834B;
+}
+
+.etiqueta-azul{
+    background-color: #4F80A4;
+}
+
+.etiqueta-roja{
+    background-color: #802920;
+}
+
+.etiqueta-gris{
+    background-color: #6C6C6C;
+}
+
+.maat-grid-blog-posts__col__info{
+    display: flex;
+    margin-left: 15px;
+}
+
+.maat-grid-blog-posts__col__info span{
+    display: flex;
+    align-items: center;
+    color: #6C6C6C;
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 15px;
+}
+
+.maat-grid-blog-posts__col__info span i{
+    margin-right: 8px;
+}
+
+.maat-grid-blog-posts__col__info span p{
+    margin: 0px;
+}
+
+.maat-grid-blog-posts__col__info__author{
+    margin-left: 2em;
+}
+
+.maat-blog-single-info{
+    padding: 1em 3em;
+}
+
+.maat-blog-single-info__desc{
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 17px;
+    color: #6C6C6C;
+}
+
+.maat-single-blog-divider{
+    width: 100%;
+    height: 1px;
+    background-color: #C0C5C7;
+    border: none;
+    color: #C0C5C7;
+    margin-top: 2em;
+}
+
+.maat-single-blog-content{
+    padding: 3em;
+    display: flex;
+}
+
+.maat-single-blog-content__cont-img{
+    width: 50%;
+}
+
+.maat-single-blog-content__desc{
+    width: 50%;
+    display: flex;
+    padding: 0px 2em;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.maat-single-blog-content__desc__title{
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 29px;
+    color: #1B1B1B;
+    text-transform: uppercase;
+}
+
+.maat-single-blog-content__desc__excerpt{
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 17px;
+    color: #6C6C6C;
+}
+
+.maat-single-blog-special-text{
+    padding: 3em 7em;
+    position: relative;
+}
+
+.maat-single-blog-special-text__text{
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 17px;
+    color: #6C6C6C;
+    font-style: italic;
+}
+
+.maat-single-blog-special-text::before{
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 100%;
+    background-color: black;
+    top: 0;
+    left: 70px;
+}
+
+.maat-single-blog-aux-img{
+    padding: 4em 3em;
+}
+
+.maat-single-blog-aux-img .aux-img{
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+}
+
+.maat-single-blog-text-aux2{
+    padding: 0px 3em;
+}
+
+.maat-single-blog-text-aux2__excerpt{
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 17px;
+    color: #6C6C6C;
+    margin-bottom: 3em;
+}
+
+.maat-single-blog-share{
+    padding: 3em;
+    display: block;
+}
+
+.maat-single-blog-share__text{
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 17px;
+    color: #1B1B1B;
+}
+
+.maat-single-blog-share__icons{
+    display: flex;
+}
+
+.maat-single-blog-share__icons .maat-single-blog-share__icons__links{
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: 1398E5;
+    border-radius: 50%;
+    margin-top: 1em;
+    margin-right: 10px;
+}
+
+.link-twitter{
+    background-color: #1398E5;
+}
+
+.link-facebook{
+    background-color: #3B5998;
+}
+
+.link-linkedin{
+    background-color: #0E76A8;
+}
+
+.link-whatsapp{
+    background-color: #1FAF38;
+}
+
+.link-envelope{
+    background-color: #6C6C6C;
+}
+
+.maat-single-blog-share__icons__links i{
+    font-size: 28px;
+    color: white;
+}
+
+.maat-single-blog-pagination{
+    margin: 3em;
+    padding: 1em;
+    background-color: #F6F6F6;
+    display: flex;
+    justify-content: space-between;
+}
+
+.maat-single-blog-pagination__navs{
+    text-decoration: none;
+    color: black;
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 20px;
+    transition: .4s;
+}
+
+.maat-single-blog-pagination__navs i{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.maat-single-blog-pagination__navs:hover{
+    opacity: .7;
+    color: black;
+}
+
+.maat-single-blog-title-related-post{
+    padding: 5em 3em;
+}
+
+.maat-single-blog-related-post{
+    padding: 0em 3em;
+    display: flex;
+}
+
+.maat-single-blog-related-post__item{
+    padding: 1em 1em 1em 0px;
+    width: 50%;
+}
+
+.maat-single-blog-related-post__item__img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.maat-single-blog-related-post__item__title{
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 20px;
+    color: #6C6C6C;
+}
