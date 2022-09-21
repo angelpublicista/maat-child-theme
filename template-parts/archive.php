@@ -18,8 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="maat-container">
         <div class="page-content">
             <div class="maat-grid-blog-search">
-                <input type="search" name="" id="" placeholder="Ingresa tu busqueda">
-                <button type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+                <?php get_search_form(); ?>
             </div>
             <div class="maat-grid-blog-filter">
                 <div class="maat-grid-blog-filter__view">
@@ -32,14 +31,16 @@ if ( ! defined( 'ABSPATH' ) ) {
                 ?>
                     <span><?php echo $text_number_posts ?></span>
                 </div>
-                <div class="maat-grid-blog-filter__filter">
-                    <span>Ordenar por</span>
-                    <select name="select">
-                        <option value="value1" selected >Más popular</option>
-                        <option value="value2">Value 2</option>
-                        <option value="value3">Value 3</option>
-                    </select>
-                </div>
+                <form action="" method="GET" id="maat-filter-form">
+                    <div class="maat-grid-blog-filter__filter">
+                        <label for="orderby" class="maat-grid-blog-filter__filter__label">Ordenar por</label>
+                        <select name="orderby" id="orderby" class="maat-grid-blog-filter__filter__select">
+                            <option value="" <?php echo selected($_GET['orderby'], ''); ?>>Orden por defecto</option>
+                            <option value="date" <?php echo selected($_GET['orderby'], 'date'); ?>>Fecha</option>
+                            <option value="title" <?php echo selected($_GET['orderby'], 'title'); ?>>Título</option>
+                        </select>
+                    </div>
+                </form>
             </div>
             <div class="maat-divider">
                 <hr class="maat-grid-blog__divider">
@@ -106,10 +107,13 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     <i class="fa-solid fa-calendar-days"></i>
                                     <p><?php echo $post_date; ?></p>
                                 </span>
+
+                                <?php if(strlen($post_author_full) > 1): ?>
                                 <span class="maat-grid-blog-posts__col__info__author">
                                     <i class="fa-regular fa-user"></i>
                                     <p>Por: <?php echo $post_author_full ?></p>
                                 </span>
+                                <?php endif; ?>
                             </div>
                             <hr class="maat-grid-blog-posts__col__divider">
                             <div class="maat-grid-blog-posts__col__desc">
@@ -126,36 +130,17 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
 
         <div class="maat-blog-pagination">
-            <a href="#">
-                <span class="arrows">
-                    <i class="fa-solid fa-angle-left"></i>
-                </span>
-            </a>
-            <p class="maat-blog-pagination__number">
-                <a href="">1</a>
-                <a href="">2</a>
-                <a href="">3</a>
-            </p>
-            <a href="#">
-                <span class="arrows">
-                    <i class="fa-solid fa-angle-right"></i>
-                </span>
-            </a>
+            <?php
+                the_posts_pagination( array(
+                    'mid_size' => 2,
+                    'prev_text' => __( '<span class="arrows"><i class="fa-solid fa-angle-left"></i></span>', 'textdomain' ),
+                    'next_text' => __( '<span class="arrows"><i class="fa-solid fa-angle-right"></i></span>', 'textdomain' ),
+                ) );
+            
+            ?>
         </div>
 
         <?php wp_link_pages(); ?>
-
-        <?php
-        global $wp_query;
-        if ( $wp_query->max_num_pages > 1 ) :
-            ?>
-            <nav class="pagination" role="navigation">
-                <?php /* Translators: HTML arrow */ ?>
-                <div class="nav-previous"><?php next_posts_link( sprintf( __( '%s older', 'hello-elementor' ), '<span class="meta-nav">&larr;</span>' ) ); ?></div>
-                <?php /* Translators: HTML arrow */ ?>
-                <div class="nav-next"><?php previous_posts_link( sprintf( __( 'newer %s', 'hello-elementor' ), '<span class="meta-nav">&rarr;</span>' ) ); ?></div>
-            </nav>
-        <?php endif; ?>
         
     </div>
 	

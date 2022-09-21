@@ -1,7 +1,6 @@
 .maat-blog-single-top{
     display: flex;
-    margin-top: 2em;
-    padding: 2em 0;
+    margin-bottom: 2em;
 }
 .maat-link-cat{
     display: inline-block;
@@ -35,7 +34,6 @@
 
 .maat-grid-blog-posts__col__info{
     display: flex;
-    margin-left: 15px;
 }
 
 .maat-grid-blog-posts__col__info span{
@@ -253,4 +251,41 @@
     font-family: 'Nexa Regular', sans-serif;
     font-size: 20px;
     color: #6C6C6C;
+}
+
+.maat-blog-content__row{
+    display: flex;
+}
+
+.maat-blog-content__col-left{
+    width: 80%;
+}
+
+.maat-blog-content__col{
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+}
+
+@media (max-width: 769px){
+    .maat-blog-content__row{
+        flex-direction: column;
+    }
+    .maat-blog-content__col-left{
+        width: 100%;
+    }
+
+    .maat-blog-single-top, .maat-grid-blog-posts__col__info{
+        flex-direction: column;
+    }
+
+    .maat-grid-blog-posts__col__info{
+        margin-top: 1rem;
+        margin-left: 0;
+    }
+
+    .maat-grid-blog-posts__col__info__author{
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+    
 }
