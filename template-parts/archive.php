@@ -89,7 +89,12 @@ if ( ! defined( 'ABSPATH' ) ) {
                                         $label_cl = "etiqueta-gris";
                                     }
 
+                                    if($cat->slug == 'uncategorized'){
+                                        $label_cl = "etiqueta-blanca";
+                                    }
+
                                     ?>
+
                                     <a class="maat-link-cat" href="<?php echo get_category_link($cat->cat_ID);?>">
                                         <span class="maat-grid-blog-posts__col__etiqueta <?php echo $label_cl ?>"><?php echo $cat->name ?></span>
                                     </a>

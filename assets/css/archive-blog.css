@@ -119,6 +119,11 @@
     background-color: #6C6C6C;
 }
 
+.etiqueta-blanca{
+    background-color: white;
+    color: #ccc;
+}
+
 .maat-link-cat{
     display: inline-block;
     text-decoration: none !important;
