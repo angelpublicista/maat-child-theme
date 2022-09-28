@@ -83,8 +83,8 @@ while ( have_posts() ) :
 					<a href="https://api.whatsapp.com/send?text=<?php the_permalink() ?>" target="_blank" data-action="share/whatsapp/share" class="maat-single-blog-share__icons__links link-whatsapp">
 						<i class="fa-brands fa-whatsapp"></i>
 					</a>
-					<a href="mailto:info@example.com?&subject=&cc=&bcc=&body=<?php the_permalink() ?>" class="maat-single-blog-share__icons__links link-envelope">
-						<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/mail-line.svg" alt="">
+					<a href="#" class="maat-single-blog-share__icons__links link-copy" data-clipboard-text="<?php the_permalink(); ?>">
+						<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/links-line.svg" alt="">
 					</a>
 				</div>
 			</div>
@@ -101,7 +101,7 @@ while ( have_posts() ) :
 			</div>
 			<ul class="maat-single-blog-related-post"> 
 			<?php
-			$related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 6, 'post__not_in' => array($post->ID) ) );
+			$related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 4, 'post__not_in' => array($post->ID) ) );
 			if( $related ) foreach( $related as $post ) {
 				setup_postdata($post); ?>
 			

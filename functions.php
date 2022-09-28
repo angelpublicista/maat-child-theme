@@ -26,6 +26,7 @@ function maat_blog_scripts(){
 	wp_enqueue_style('maat-archive-blog-css', get_stylesheet_directory_uri() . "/assets/css/archive-blog.css" ,array(), null);
 	wp_enqueue_script('maar-blog-js', get_stylesheet_directory_uri() . "/assets/js/maat-blog.js",array(),"1.0",true);
     wp_enqueue_style('maat-single-blog-css', get_stylesheet_directory_uri() . "/assets/css/single-blog.css",array(), null);
+	wp_enqueue_script('copyclipboard-js','https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js',array(),"2.0.10");
 }
 
 add_action('wp_enqueue_scripts','maat_blog_scripts');
