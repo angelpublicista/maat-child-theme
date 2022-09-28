@@ -80,9 +80,9 @@ while ( have_posts() ) :
 					<a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink() ?>&title=&summary=&source=" target="_blank" class="maat-single-blog-share__icons__links link-linkedin">
 						<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/linkedin-line.svg" alt="">
 					</a>
-					<!-- <a href="whatsapp://send?text=<?php //the_permalink() ?>" target="_blank" data-action="share/whatsapp/share" class="maat-single-blog-share__icons__links link-whatsapp">
+					<a href="https://api.whatsapp.com/send?text=<?php the_permalink() ?>" target="_blank" data-action="share/whatsapp/share" class="maat-single-blog-share__icons__links link-whatsapp">
 						<i class="fa-brands fa-whatsapp"></i>
-					</a> -->
+					</a>
 					<a href="mailto:info@example.com?&subject=&cc=&bcc=&body=<?php the_permalink() ?>" class="maat-single-blog-share__icons__links link-envelope">
 						<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/mail-line.svg" alt="">
 					</a>

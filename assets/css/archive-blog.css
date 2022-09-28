@@ -338,6 +338,16 @@
     color: #1B1B1B;
 }
 
+.search-form{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maat-grid-blog-search{
+	margin: 3em 0px !important;
+}
+
 @media (min-width: 1200px){
     .maat-container{
         max-width: 1140px;
