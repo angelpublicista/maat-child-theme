@@ -270,7 +270,11 @@
 }
 
 .maat-blog-content__col-left{
-    width: 80%;
+    width: 70%;
+}
+
+.maat-blog-content__col-right{
+    width: 30%;
 }
 
 .maat-blog-content__col{
