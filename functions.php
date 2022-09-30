@@ -67,3 +67,4 @@ function dcms_agregar_nueva_zona_widgets() {
 add_action( 'widgets_init', 'dcms_agregar_nueva_zona_widgets' );
 
 require_once('inc/shortcodes/sc-heading-blog.php');
+require_once('inc/shortcodes/sc-share-links.php');

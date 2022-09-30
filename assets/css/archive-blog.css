@@ -202,7 +202,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5em 0;
+    margin: 2em 0;
 }
 
 .maat-grid-blog-search input{
@@ -281,7 +281,8 @@
 }
 
 .maat-divider{
-    padding: 2em;
+    padding: 1em;
+    padding-bottom: 0;
 }
 
 .maat-grid-blog__divider{
@@ -342,10 +343,6 @@
 	display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.maat-grid-blog-search{
-	margin: 3em 0px !important;
 }
 
 @media (min-width: 1200px){
