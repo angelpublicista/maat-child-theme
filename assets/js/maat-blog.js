@@ -12,12 +12,14 @@ if(formFilter){
     })
 }
 
-const btnCopyUrl = document.querySelector('.maat-single-blog-share__icons__links.link-copy');
+const btnCopyUrl = document.querySelectorAll('.maat-single-blog-share__icons__links.link-copy');
 
 if(btnCopyUrl){
-    btnCopyUrl.addEventListener('click', function(e) {
-        e.preventDefault()
-        new ClipboardJS('.maat-single-blog-share__icons__links.link-copy');
-        alert('Enlace copiado')
-    })
+    btnCopyUrl.forEach(element => {
+        element.addEventListener('click', function(e) {
+            e.preventDefault()
+            new ClipboardJS('.maat-single-blog-share__icons__links.link-copy');
+            alert('Enlace copiado')
+        })
+    });
 }
