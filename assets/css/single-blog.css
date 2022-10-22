@@ -157,6 +157,7 @@
 
 .maat-single-blog-share{
     padding: 3em 0;
+    padding-bottom: 0;
     display: block;
 }
 
@@ -315,6 +316,62 @@
 	color: #1B1B1B;
 }
 
+/* Single recursos */
+.maat-single-blog__content__cover{
+    max-height: 350px;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.maat-single-blog__content__box-cover{
+    position: relative;
+}
+
+.maat-single-blog__content__caption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.maat-single-blog__content__caption__title{
+    margin: 0 2rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Nexa Black', sans-serif !important;
+    font-style: italic;
+}
+.maat-single-blog__content__caption__icon{
+    margin-left: 30px;
+    height: 100%;
+}
+
+.maat-card-recursos-cat__caption__icon__img{
+    position: absolute;
+    left: 40px;
+    height: 80px;
+    top: calc(50% - 40px);
+}
+
+.maat-single-blog__content__caption__icon__bg{
+    width: 100px;
+    height: 100%;
+    background-color: black;
+    transform: rotate(15deg) scale(1.5);
+}
+
+
+.maat-single-blog__content__box-cover{
+    margin-bottom: 3rem;
+    overflow: hidden;
+}
+
 @media (max-width: 769px){
     .maat-blog-content__row{
         flex-direction: column;
@@ -442,5 +499,20 @@
 
     .maat-single-blog-share__icons .maat-single-blog-share__icons__links img{
         width: 20px;
+    }
+
+    .maat-single-blog__content__caption__title{
+        font-size: 20px;
+    }
+
+    .maat-card-recursos-cat__caption__icon__img{
+        height: 60px;
+        top: calc(50% - 30px);
+        left: 20px;
+    }
+
+    .maat-single-blog__content__caption__icon__bg{
+        position: relative;
+        width: 60px;
     }
 }
