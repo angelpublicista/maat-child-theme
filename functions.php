@@ -31,6 +31,12 @@ function maat_blog_scripts(){
 
 add_action('wp_enqueue_scripts','maat_blog_scripts');
 
+function maat_resources_scripts(){
+	wp_enqueue_style('maat-archive-recursos-css', get_stylesheet_directory_uri() . "/assets/css/archive-recursos.css" ,array(), null);
+}
+
+add_action('wp_enqueue_scripts','maat_resources_scripts');
+
 
 add_filter('get_the_archive_title', function ($title) {
     if (is_category()) {
@@ -68,3 +74,5 @@ add_action( 'widgets_init', 'dcms_agregar_nueva_zona_widgets' );
 
 require_once('inc/shortcodes/sc-heading-blog.php');
 require_once('inc/shortcodes/sc-share-links.php');
+require_once('inc/custom-post-types/cpt-recursos.php');
+require_once('inc/taxonomies/tax-tipo-recurso.php');
