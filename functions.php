@@ -33,6 +33,12 @@ add_action('wp_enqueue_scripts','maat_blog_scripts');
 
 function maat_resources_scripts(){
 	wp_enqueue_style('maat-archive-recursos-css', get_stylesheet_directory_uri() . "/assets/css/archive-recursos.css" ,array(), null);
+	wp_enqueue_style('maat-slick-css', get_stylesheet_directory_uri() . "/slick/slick.css" ,array(), null);
+	wp_enqueue_style('maat-slick-theme-css', get_stylesheet_directory_uri() . "/slick/slick-theme.css" ,array(), null);
+	wp_enqueue_style('maat-slick-remix-icons-css', "https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" ,array(), null);
+	wp_enqueue_script('maat-recursos-js', get_stylesheet_directory_uri() . "/assets/js/maat-recursos.js",array(),"1.0",true);
+	wp_enqueue_script('maat-slick-js', get_stylesheet_directory_uri() . "/slick/slick.min.js",array(),"1.8.1",true);
+	
 }
 
 add_action('wp_enqueue_scripts','maat_resources_scripts');

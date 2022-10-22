@@ -40,7 +40,7 @@
 
 .maat-grid-recursos-cat{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 20px;
     padding: 2rem 0;
 }
@@ -48,4 +48,107 @@
 .maat-card-recursos-cat__caption:hover{
     color: white;
     background-color: rgba(0, 0, 0, .7);
+}
+
+.maat-recursos-recientes__card__top{
+    position: relative;
+    overflow: hidden;
+}
+
+.maat-recursos-recientes__card__cover{
+    width: 100%;
+    transition: .4s;
+}
+
+.maat-recursos-recientes__card__caption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, .3);
+    color: #F6F6F6;
+    transition: .4s;
+    padding: 2rem;
+}
+
+.maat-recursos-recientes__card:hover .maat-recursos-recientes__card__cover{
+    transform: scale(1.2) rotate(-2deg);
+}
+
+.maat-recursos-recientes__card__caption:hover{
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.maat-recursos-recientes__card__caption__icon{
+    width: 35px;
+    height: 35px;
+}
+
+.maat-recursos-recientes__card__link{
+    display: inline-block;
+    transition: .4s;
+    margin: 1rem 0;
+}
+
+.maat-recursos-recientes__card__link:hover{
+    opacity: .7;
+}
+
+.maat-recursos-recientes__card__title{
+    color: #1B1B1B;
+    font-size: 29px;
+    font-family: 'Nexa Regular', sans-serif;
+    margin: 0;
+}
+
+.maat-recursos-recientes__card__excerpt{
+    color: #6C6C6C;
+    font-size: 17px;
+    font-family: 'Nexa Regular', sans-serif;
+}
+
+.maat-recursos-recientes .item{
+    padding: 1rem;
+}
+
+.maat-recursos-recientes .slick-arrow{
+    top: -50px;
+    font-size: 20px;
+    padding: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-color: black;
+    color: black;
+}
+
+.maat-recursos-recientes .slick-arrow:hover{
+    background-color: black;
+    color: white;
+}
+
+.maat-recursos-recientes .slick-arrow:focus{
+    background-color: white;
+    outline: 0px;
+    color: black;
+}
+
+.maat-recursos-recientes .maat-btn-next{
+    right: 0;
+}
+
+.maat-recursos-recientes .maat-btn-prev{
+    right: 60px;
+}
+
+@media (max-width: 480px){
+    .maat-recursos-recientes__card__caption{
+        padding: 1rem;
+    }
 }

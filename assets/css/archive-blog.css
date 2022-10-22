@@ -74,8 +74,10 @@
     max-width: 1440px;
     margin-right: auto;
     margin-left: auto;
-    width: 100%;
+    width: 90%;
 }
+
+
 
 .maat-grid-blog-posts__row{
     display: flex;
@@ -345,7 +347,13 @@
     justify-content: center;
 }
 
-@media (min-width: 1200px){
+/* @media (min-width: 1440px){
+    .maat-container{
+        max-width: 1600px;
+    }
+} */
+
+@media (min-width: 1200px) and (max-width: 1440px){
     .maat-container{
         max-width: 1140px;
     }
