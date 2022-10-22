@@ -41,6 +41,7 @@ if ( ! function_exists( 'maat_type_resource_func' ) ) {
             'show_in_nav_menus'          => true,
             'show_tagcloud'              => true,
             'rewrite'                    => $rewrite,
+            'show_in_rest'               => true,
         );
         register_taxonomy( 'maat_type_resource', array( 'recursos_cp' ), $args );
     

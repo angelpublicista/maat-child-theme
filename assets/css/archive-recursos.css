@@ -34,6 +34,10 @@
     font-family: 'Nexa Regular', sans-serif;
 }
 
+.maat-card-recursos-cat__caption__icon{
+    width: 82px;
+}
+
 .maat-card-recursos-cat:hover .maat-card-recursos-cat__cover{
     transform: scale(1.2) rotate(-2deg);
 }
@@ -70,7 +74,7 @@
     background-color: rgba(0, 0, 0, .3);
     color: #F6F6F6;
     transition: .4s;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .maat-recursos-recientes__card:hover .maat-recursos-recientes__card__cover{
@@ -84,6 +88,7 @@
 .maat-recursos-recientes__card__caption__icon{
     width: 35px;
     height: 35px;
+    margin-bottom: 1rem;
 }
 
 .maat-recursos-recientes__card__link{
@@ -147,8 +152,14 @@
     right: 60px;
 }
 
-@media (max-width: 480px){
-    .maat-recursos-recientes__card__caption{
-        padding: 1rem;
-    }
+.maat-recusros-search-section{
+    padding: 3rem;
+    text-align: center;
+    background-color: #F6F6F6;
+    margin-top: 3rem;
+}
+
+.maat-recusros-search-section__leyend{
+    font-family: 'Nexa Regular', sans-serif;
+    font-size: 29px;
 }

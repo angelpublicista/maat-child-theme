@@ -82,3 +82,4 @@ require_once('inc/shortcodes/sc-heading-blog.php');
 require_once('inc/shortcodes/sc-share-links.php');
 require_once('inc/custom-post-types/cpt-recursos.php');
 require_once('inc/taxonomies/tax-tipo-recurso.php');
+require_once('inc/shortcodes/sc-grid-tipos-recursos.php');

@@ -24,32 +24,8 @@ get_header();
             <?php echo do_shortcode('[maat_title text="Categorías"]'); ?>
         </div>
 
-        <section>
-            <div class="maat-grid-recursos-cat">
-                <div class="maat-card-recursos-cat">
-                    <img src="http://maat.local/wp-content/uploads/2022/08/Frame-1-1-1.png" alt="" class="maat-card-recursos-cat__cover">
-                    <a href="#" class="maat-card-recursos-cat__caption">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/play-circle-line.svg" alt="" class="maat-card-recursos-cat__caption__icon">
-                        <h4 class="maat-card-recursos-cat__caption__title">Tutoriales</h4>
-                    </a>
-                </div>
-
-                <div class="maat-card-recursos-cat">
-                    <img src="http://maat.local/wp-content/uploads/2022/08/Frame-1-1-1.png" alt="" class="maat-card-recursos-cat__cover">
-                    <a href="#" class="maat-card-recursos-cat__caption">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/play-circle-line.svg" alt="" class="maat-card-recursos-cat__caption__icon">
-                        <h4 class="maat-card-recursos-cat__caption__title">Tutoriales</h4>
-                    </a>
-                </div>
-
-                <div class="maat-card-recursos-cat">
-                    <img src="http://maat.local/wp-content/uploads/2022/08/Frame-1-1-1.png" alt="" class="maat-card-recursos-cat__cover">
-                    <a href="#" class="maat-card-recursos-cat__caption">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/play-circle-line.svg" alt="" class="maat-card-recursos-cat__caption__icon">
-                        <h4 class="maat-card-recursos-cat__caption__title">Tutoriales</h4>
-                    </a>
-                </div>
-            </div>
+        <section id="maat-recursos-cat">
+            <?php echo do_shortcode( '[maat_grid_tipos_recursos]'); ?>
         </section>
 
         <div class="maat-rec-title">
@@ -58,76 +34,45 @@ get_header();
 
         <section>
             <div class="maat-recursos-recientes slick-theme">
+                <?php while(have_posts()): the_post();
+                 $types = get_the_terms( $post->ID, 'maat_type_resource');
+                ?>
                 <div class="item">
                     <div class="maat-recursos-recientes__card">
                         <div class="maat-recursos-recientes__card__top">
-                            <img src="http://maat.local/wp-content/uploads/2022/08/Frame-1-1-1.png" alt="" class="maat-recursos-recientes__card__cover">
-                            <a href="#" class="maat-recursos-recientes__card__caption">
-                                <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/play-circle-line.svg" alt="" class="maat-recursos-recientes__card__caption__icon">
+                            <?php the_post_thumbnail( 'full', array('class' => 'maat-recursos-recientes__card__cover', 'alt' => get_the_title() ) ); ?>
+                            <a href="<?php the_permalink()?>" class="maat-recursos-recientes__card__caption">
+                                <?php 
+                                    foreach ($types as $type) {
+                                        $icon = get_field('icono', 'maat_type_resource' . '_' . $type->term_id);
+                                        
+                                        if($icon){
+                                            $iconUrl = $icon['url'];
+                                            echo '<img src="'.$iconUrl.'" alt="" class="maat-recursos-recientes__card__caption__icon">';
+                                        }
+                                    }
+                                ?>
+                                
                             </a>
                         </div>
                         <div class="maat-recursos-recientes__card__bottom">
-                            <a href="#" class="maat-recursos-recientes__card__link">
-                                <h3 class="maat-recursos-recientes__card__title">Lorem ipsum dolor sit amet.</h3>
+                            <a href="<?php the_permalink()?>" class="maat-recursos-recientes__card__link">
+                                <h3 class="maat-recursos-recientes__card__title"><?php the_title()?></h3>
                             </a>
-                            <p class="maat-recursos-recientes__card__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur repudiandae nemo dolorum non delectus quo, assumenda, voluptatum officia similique architecto incidunt voluptas, ipsum soluta explicabo consectetur. Exercitationem, expedita? Perspiciatis, consectetur.</p>
+                            <div class="maat-recursos-recientes__card__excerpt"><?php the_excerpt()?></div>
                         </div>
                     </div>
                 </div>
-
-                <div class="item">
-                    <div class="maat-recursos-recientes__card">
-                        <div class="maat-recursos-recientes__card__top">
-                            <img src="http://maat.local/wp-content/uploads/2022/08/Frame-1-1-1.png" alt="" class="maat-recursos-recientes__card__cover">
-                            <a href="#" class="maat-recursos-recientes__card__caption">
-                                <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/play-circle-line.svg" alt="" class="maat-recursos-recientes__card__caption__icon">
-                            </a>
-                        </div>
-                        <div class="maat-recursos-recientes__card__bottom">
-                            <a href="#" class="maat-recursos-recientes__card__link">
-                                <h3 class="maat-recursos-recientes__card__title">Lorem ipsum dolor sit amet.</h3>
-                            </a>
-                            <p class="maat-recursos-recientes__card__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur repudiandae nemo dolorum non delectus quo, assumenda, voluptatum officia similique architecto incidunt voluptas, ipsum soluta explicabo consectetur. Exercitationem, expedita? Perspiciatis, consectetur.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="maat-recursos-recientes__card">
-                        <div class="maat-recursos-recientes__card__top">
-                            <img src="http://maat.local/wp-content/uploads/2022/08/Frame-1-1-1.png" alt="" class="maat-recursos-recientes__card__cover">
-                            <a href="#" class="maat-recursos-recientes__card__caption">
-                                <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/play-circle-line.svg" alt="" class="maat-recursos-recientes__card__caption__icon">
-                            </a>
-                        </div>
-                        <div class="maat-recursos-recientes__card__bottom">
-                            <a href="#" class="maat-recursos-recientes__card__link">
-                                <h3 class="maat-recursos-recientes__card__title">Lorem ipsum dolor sit amet.</h3>
-                            </a>
-                            <p class="maat-recursos-recientes__card__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur repudiandae nemo dolorum non delectus quo, assumenda, voluptatum officia similique architecto incidunt voluptas, ipsum soluta explicabo consectetur. Exercitationem, expedita? Perspiciatis, consectetur.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="maat-recursos-recientes__card">
-                        <div class="maat-recursos-recientes__card__top">
-                            <img src="http://maat.local/wp-content/uploads/2022/08/Frame-1-1-1.png" alt="" class="maat-recursos-recientes__card__cover">
-                            <a href="#" class="maat-recursos-recientes__card__caption">
-                                <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/play-circle-line.svg" alt="" class="maat-recursos-recientes__card__caption__icon">
-                            </a>
-                        </div>
-                        <div class="maat-recursos-recientes__card__bottom">
-                            <a href="#" class="maat-recursos-recientes__card__link">
-                                <h3 class="maat-recursos-recientes__card__title">Lorem ipsum dolor sit amet.</h3>
-                            </a>
-                            <p class="maat-recursos-recientes__card__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur repudiandae nemo dolorum non delectus quo, assumenda, voluptatum officia similique architecto incidunt voluptas, ipsum soluta explicabo consectetur. Exercitationem, expedita? Perspiciatis, consectetur.</p>
-                        </div>
-                    </div>
-                </div>
+                <?php endwhile; ?>
             </div>
         </section>
     </div>
+    <section class="maat-recusros-search-section">
+        <p class="maat-recusros-search-section__leyend">¿Buscas algo?</p>
+        <div class="maat-grid-blog-search">
+            <?php get_search_form(); ?>
+        </div>
+    </section>
 	
 </main>
 <?php
