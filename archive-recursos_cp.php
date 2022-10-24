@@ -16,7 +16,7 @@ get_header();
 
     <?php 
         $bg = get_stylesheet_directory_uri() . "/assets/img/bg-recursos.png";
-        echo do_shortcode('[maat_heading_blog title="'.$archive_title.'" background="'.$bg.'"]'); 
+        echo do_shortcode('[maat_heading_blog title="'.$archive_title.'" background="'.$bg.'" style="style-2"]'); 
     ?>
 
     <div class="maat-container">

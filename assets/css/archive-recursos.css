@@ -1,5 +1,6 @@
 .maat-rec-title{
     margin: 7em 0;
+    margin-bottom: 4em;
 }
 
 .maat-card-recursos-cat{
@@ -27,6 +28,7 @@
     color: #F6F6F6;
     transition: .4s;
     font-size: 29px;
+    text-decoration: none !important;
 }
 
 .maat-card-recursos-cat__caption__title{
@@ -54,6 +56,14 @@
     background-color: rgba(0, 0, 0, .7);
 }
 
+.maat-card-recursos-cat.inactive{
+    pointer-events: none;
+}
+
+.maat-card-recursos-cat.inactive{
+    opacity: .5;
+}
+
 .maat-recursos-recientes__card__top{
     position: relative;
     overflow: hidden;
@@ -61,6 +71,7 @@
 
 .maat-recursos-recientes__card__cover{
     width: 100%;
+    vertical-align: middle;
     transition: .4s;
 }
 
@@ -95,6 +106,7 @@
     display: inline-block;
     transition: .4s;
     margin: 1rem 0;
+    text-decoration: none !important;
 }
 
 .maat-recursos-recientes__card__link:hover{
@@ -162,4 +174,12 @@
 .maat-recusros-search-section__leyend{
     font-family: 'Nexa Regular', sans-serif;
     font-size: 29px;
+}
+
+/* Taxonomy archive */
+.maat-grid-tipo-recursos{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: 20px;
 }
