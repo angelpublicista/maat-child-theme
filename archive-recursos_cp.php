@@ -43,12 +43,14 @@ get_header();
                             <?php the_post_thumbnail( 'full', array('class' => 'maat-recursos-recientes__card__cover', 'alt' => get_the_title() ) ); ?>
                             <a href="<?php the_permalink()?>" class="maat-recursos-recientes__card__caption">
                                 <?php 
-                                    foreach ($types as $type) {
-                                        $icon = get_field('icono', 'maat_type_resource' . '_' . $type->term_id);
-                                        
-                                        if($icon){
-                                            $iconUrl = $icon['url'];
-                                            echo '<img src="'.$iconUrl.'" alt="" class="maat-recursos-recientes__card__caption__icon">';
+                                    if($types){
+                                        foreach ($types as $type) {
+                                            $icon = get_field('icono', 'maat_type_resource' . '_' . $type->term_id);
+                                            
+                                            if($icon){
+                                                $iconUrl = $icon['url'];
+                                                echo '<img src="'.$iconUrl.'" alt="" class="maat-recursos-recientes__card__caption__icon">';
+                                            }
                                         }
                                     }
                                 ?>
