@@ -42,7 +42,7 @@ function recursos_cp() {
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
-		'show_in_rest'       => true,
+		'show_in_rest'          => true,
 		'menu_position'         => 5,
 		'menu_icon'             => 'dashicons-media-archive',
 		'show_in_admin_bar'     => true,

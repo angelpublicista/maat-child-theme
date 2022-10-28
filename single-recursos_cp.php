@@ -65,7 +65,7 @@ get_header();
 					</span>
 					<span class="maat-grid-blog-posts__col__info__author">
 						<i class="fa-regular fa-user"></i>
-						<p>Por <?php the_author_firstname();?> <?php the_author_lastname(); ?></p>
+						<p>Por <?php the_author_meta('first_name');?> <?php the_author_meta('last_name'); ?></p>
 					</span>
 				</div>	   
 			</div>

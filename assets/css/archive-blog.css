@@ -366,6 +366,30 @@
     justify-content: center;
 }
 
+.maat-search-results{
+    padding: 5rem 2rem;
+    font-family: 'Nexa Regular', sans-serif;
+}
+
+.maat-search-results .entry-title a{
+    color: #1B1B1B;
+    font-family: 'Nexa Regular', sans-serif;
+}
+
+.maat-search-results .entry-summary{
+    color: #6C6C6C;
+}
+
+.mt-search-result{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.mt-search-result:last-child{
+    border-bottom: none;
+}
+
 @media (min-width: 1200px) and (max-width: 1440px){
     .maat-container{
         max-width: 1140px;
