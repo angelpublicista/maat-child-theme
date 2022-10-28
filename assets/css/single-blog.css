@@ -254,19 +254,23 @@
 }
 
 .maat-single-blog-related-post{
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
     list-style: none;
     padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 1em;
 }
 
-.maat-single-blog-related-post__item{
-    padding: 1em 1em 1em 0px;
-    width: 50%;
+
+.maat-single__related-post{
+    width: 100%;
+    order: 3;
+    padding: 2em;
 }
 
 .maat-single-blog-related-post__item__img{
     width: 100%;
+    height: 250px;
     object-fit: cover;
 }
 
@@ -278,14 +282,17 @@
 
 .maat-blog-content__row{
     display: flex;
+    flex-flow: row wrap;
 }
 
 .maat-blog-content__col-left{
     width: 70%;
+    order: 1;
 }
 
 .maat-blog-content__col-right{
 	width: 30%;
+    order: 2;
 }
 
 .maat-blog-content__col{
@@ -346,6 +353,7 @@
     text-transform: uppercase;
     font-family: 'Nexa Black', sans-serif !important;
     font-style: italic;
+    margin-left: 8rem;
 }
 .maat-single-blog__content__caption__icon{
     margin-left: 30px;
@@ -364,6 +372,9 @@
     height: 100%;
     background-color: black;
     transform: rotate(15deg) scale(1.5);
+    position: absolute;
+    left: 30px;
+    top: 0;
 }
 
 
@@ -392,10 +403,6 @@
     .maat-grid-blog-posts__col__info__author{
         margin-left: 0;
         margin-top: 1rem;
-    }
-
-    .maat-single-blog-related-post__item{
-        width: 50%;
     }
 
     .maat-blog-content__col-left{
@@ -453,6 +460,7 @@
     .maat-blog-content__col.maat-blog-content__col-right{
         background-color: #f8f8f8;
         margin-bottom: 1rem;
+        order: 3;
     }
 
     .maat-heading-blog__entry__title{
@@ -503,6 +511,7 @@
 
     .maat-single-blog__content__caption__title{
         font-size: 20px;
+        margin-left: 3rem;
     }
 
     .maat-card-recursos-cat__caption__icon__img{
@@ -512,7 +521,11 @@
     }
 
     .maat-single-blog__content__caption__icon__bg{
-        position: relative;
         width: 60px;
+        left: 20px;
+    }
+
+    .maat-single__related-post{
+        order: 2;
     }
 }

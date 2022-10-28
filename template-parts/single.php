@@ -17,6 +17,7 @@ while ( have_posts() ) :
 	
 <main id="content" <?php post_class( 'site-main' ); ?> role="main">
 	<div class="maat-blog-content__row">
+		<!-- Content -->
 		<div class="maat-blog-content__col maat-blog-content__col-left">
 			<div class="maat-blog-single-top">
 				<?php 
@@ -96,32 +97,38 @@ while ( have_posts() ) :
 					next_post_link('%link', '<span style="margin-right: 15px;">Siguiente</span> <i class="fa-solid fa-angle-right"></i>'); 
 				?>
 			</div>
-			<div class="maat-single-blog-title-related-post">
-				<?php echo do_shortcode('[maat_title text="Te puede interesar"]'); ?>
-			</div>
-			<ul class="maat-single-blog-related-post"> 
-			<?php
-			$related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 4, 'post__not_in' => array($post->ID) ) );
-			if( $related ) foreach( $related as $post ) {
-				setup_postdata($post); ?>
-			
-					<li class="maat-single-blog-related-post__item">
-						<?php 
-							if(!get_the_post_thumbnail()){
-								echo "<img class='maat-single-blog-related-post__item__img' style='border: 1px solid #ccc;' src='".get_stylesheet_directory_uri()."/assets/img/photo-not-available.jpg'>";
-							}
-						
-							the_post_thumbnail('full', array('class' => 'maat-single-blog-related-post__item__img'));
-						?>
-						<a class="maat-single-blog-related-post__item__title" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-					</li>
-				 
-			<?php }
-			wp_reset_postdata(); ?>
-			</ul>  
 			<?php //comments_template(); ?>
 		</div>
 
+		<!-- Related posts -->
+		<section class="maat-single__related-post">
+			<div class="maat-single-blog-title-related-post">
+				<?php echo do_shortcode('[maat_title text="Te puede interesar"]'); ?>
+			</div>
+
+			<ul class="maat-single-blog-related-post"> 
+				<?php
+				$related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 4, 'post__not_in' => array($post->ID) ) );
+				if( $related ) foreach( $related as $post ) {
+					setup_postdata($post); ?>
+				
+						<li class="maat-single-blog-related-post__item">
+							<?php 
+								if(!get_the_post_thumbnail()){
+									echo "<img class='maat-single-blog-related-post__item__img' style='border: 1px solid #ccc;' src='".get_stylesheet_directory_uri()."/assets/img/photo-not-available.jpg'>";
+								}
+							
+								the_post_thumbnail('full', array('class' => 'maat-single-blog-related-post__item__img'));
+							?>
+							<a class="maat-single-blog-related-post__item__title" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+						</li>
+						
+				<?php }
+				wp_reset_postdata(); ?>
+			</ul>
+		</section>
+
+		<!-- Sidebar -->
 		<div class="maat-blog-content__col maat-blog-content__col-right">
 			<?php dynamic_sidebar('id-nueva-zona'); ?>
 		</div>
