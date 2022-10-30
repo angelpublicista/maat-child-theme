@@ -51,8 +51,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                     the_post();
                     $post_link = get_permalink();
                     $post_date = get_the_date();
-                    $post_author_fn = get_the_author_firstname();
-                    $post_author_ln = get_the_author_lastname();
+                    $post_author_fn = get_the_author_meta('first_name');
+                    $post_author_ln = get_the_author_meta('last_name');
                     $post_author_full = $post_author_fn . " " . $post_author_ln;
                     $post_cats = get_the_category();
 
