@@ -15,7 +15,11 @@ get_header();
     <?php $archive_title = get_the_archive_title();
     ?>
 
-    <?php echo do_shortcode('[maat_heading_blog title="'.$archive_title.'"]'); ?>
+    <?php 
+        $page = get_page_by_path( 'blog');
+        $bg = get_the_post_thumbnail_url($page->ID, 'full');
+        echo do_shortcode('[maat_heading_blog title="'.$archive_title.'" background="'.$bg.'"]'); 
+    ?>
 
     <div class="maat-container">
         <div class="page-content">

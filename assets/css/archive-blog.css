@@ -390,6 +390,13 @@
     border-bottom: none;
 }
 
+.maat-blog__page-template .maat-blog-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
 @media (min-width: 1200px) and (max-width: 1440px){
     .maat-container{
         max-width: 1140px;
