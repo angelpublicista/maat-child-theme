@@ -94,6 +94,23 @@ function dcms_agregar_nueva_zona_widgets() {
 add_action( 'widgets_init', 'dcms_agregar_nueva_zona_widgets' );
 
 
+function recursos_widgets_sidebar() {
+
+	register_sidebar( array(
+		'name'          => 'Maat Sidebar Recursos',
+		'id'            => 'id-sidebar-recursos',
+		'description'   => '',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	
+}
+
+add_action( 'widgets_init', 'recursos_widgets_sidebar' );
+
+
 require_once('inc/helpers.php');
 require_once('inc/shortcodes/sc-heading-blog.php');
 require_once('inc/shortcodes/sc-share-links.php');

@@ -156,7 +156,7 @@ get_header();
 
 		<!-- Sidebar -->
 		<div class="maat-blog-content__col maat-blog-content__col-right">
-			<?php dynamic_sidebar('id-nueva-zona'); ?>
+			<?php dynamic_sidebar('id-sidebar-recursos'); ?>
 		</div>
 	</div>
 </main>
