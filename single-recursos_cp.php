@@ -9,11 +9,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-while ( have_posts() ) :
+get_header();
+
+    while ( have_posts() ) :
 	the_post();
+    $types = get_the_terms( $post->ID, 'maat_type_resource');
+    $bg = get_field('portada', 'maat_type_resource' . '_' . $types[0]->term_id);
+    $bg_url = $bg['url']; 
+   
 	?>
 
-	<?php echo do_shortcode('[maat_heading_blog title="'.get_the_title().'"]'); ?>
+	<?php echo do_shortcode('[maat_heading_blog background="'.$bg_url.'" title="'.$types[0]->name.'" title-tag="h2"]'); ?>
 	
 <main id="content" <?php post_class( 'site-main' ); ?> role="main">
 	<div class="maat-blog-content__row">
@@ -59,13 +65,33 @@ while ( have_posts() ) :
 					</span>
 					<span class="maat-grid-blog-posts__col__info__author">
 						<i class="fa-regular fa-user"></i>
-						<p>Por <?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?></p>
+						<p>Por <?php the_author_meta('first_name');?> <?php the_author_meta('last_name'); ?></p>
 					</span>
 				</div>	   
 			</div>
 
 			<div class="maat-single-blog__content">
-				<?php the_content(); ?>
+                <div class="maat-single-blog__content__box-cover">
+                    <?php 
+                        the_post_thumbnail( 'large', array('class' => 'maat-single-blog__content__cover') );
+                    ?>
+                    <div class="maat-single-blog__content__caption">
+						<div class="maat-single-blog__content__caption__icon">
+							<div class="maat-single-blog__content__caption__icon__bg"></div>
+							<?php 
+								$icon = get_field('icono', 'maat_type_resource' . '_' . $types[0]->term_id);
+								$icon_url = $icon['url']; 
+							?>
+							<img src="<?php echo $icon_url ?>" alt="" class="maat-card-recursos-cat__caption__icon__img">
+						</div>
+						
+                        <?php the_title( "<h1 class='maat-single-blog__content__caption__title'>", "</h1>"); ?>
+                    </div>
+                </div>
+
+                <?php
+                the_content(); 
+                ?>
 			</div>
 		
 			<!-- Share Links -->
@@ -137,3 +163,5 @@ while ( have_posts() ) :
 
 	<?php
 endwhile;
+
+get_footer();

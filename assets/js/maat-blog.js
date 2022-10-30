@@ -11,3 +11,15 @@ if(formFilter){
         formFilter.submit()
     })
 }
+
+const btnCopyUrl = document.querySelectorAll('.maat-single-blog-share__icons__links.link-copy');
+
+if(btnCopyUrl){
+    btnCopyUrl.forEach(element => {
+        element.addEventListener('click', function(e) {
+            e.preventDefault()
+            new ClipboardJS('.maat-single-blog-share__icons__links.link-copy');
+            alert('Enlace copiado')
+        })
+    });
+}

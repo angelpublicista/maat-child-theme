@@ -64,7 +64,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     echo "<img style='border: 1px solid #ccc;' src='".get_stylesheet_directory_uri()."/assets/img/photo-not-available.jpg'>";
                                 }
                             
-                                the_post_thumbnail('full', array('class' => 'maat-grid-blog-posts__col__img'))
+                                the_post_thumbnail('full', array('class' => 'maat-grid-blog-posts__col__img', 'alt' => get_the_title()))
                             ?>
                         </div>
                         <div class="maat-grid-blog-posts__col">

@@ -157,6 +157,7 @@
 
 .maat-single-blog-share{
     padding: 3em 0;
+    padding-bottom: 0;
     display: block;
 }
 
@@ -168,6 +169,7 @@
 
 .maat-single-blog-share__icons{
     display: flex;
+    flex-flow: row wrap;
 }
 
 .maat-single-blog-share__icons .maat-single-blog-share__icons__links{
@@ -181,6 +183,11 @@
     border-radius: 50%;
     margin-top: 1em;
     margin-right: 10px;
+    transition: .3s;
+}
+
+.maat-single-blog-share__icons__links:hover{
+    opacity: .7;
 }
 
 .link-twitter{
@@ -201,6 +208,10 @@
 
 .link-envelope{
     background-color: #6C6C6C;
+}
+
+.link-copy{
+    background-color: #1B1B1B;
 }
 
 .maat-single-blog-share__icons__links i{
@@ -243,19 +254,23 @@
 }
 
 .maat-single-blog-related-post{
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
     list-style: none;
     padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 1em;
 }
 
-.maat-single-blog-related-post__item{
-    padding: 1em 1em 1em 0px;
-    width: 50%;
+
+.maat-single__related-post{
+    width: 100%;
+    order: 3;
+    padding: 2em;
 }
 
 .maat-single-blog-related-post__item__img{
     width: 100%;
+    height: 250px;
     object-fit: cover;
 }
 
@@ -267,14 +282,17 @@
 
 .maat-blog-content__row{
     display: flex;
+    flex-flow: row wrap;
 }
 
 .maat-blog-content__col-left{
     width: 70%;
+    order: 1;
 }
 
 .maat-blog-content__col-right{
-    width: 30%;
+	width: 30%;
+    order: 2;
 }
 
 .maat-blog-content__col{
@@ -288,6 +306,81 @@
 
 .maat-single-blog__content h1, .maat-single-blog__content h2, .maat-single-blog__content h3, .maat-single-blog__content h4, .maat-single-blog__content h5{
     font-family: 'Nexa Bold', sans-serif;
+}
+
+.text-aux{
+	position: relative;	
+}
+
+.text-aux::before{
+	position: absolute;
+	content: '';
+	top: 0px;
+	left: 60px;
+	width: 5px;
+	height: 100%;
+	background-color: #1B1B1B;
+	color: #1B1B1B;
+}
+
+/* Single recursos */
+.maat-single-blog__content__cover{
+    max-height: 350px;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.maat-single-blog__content__box-cover{
+    position: relative;
+}
+
+.maat-single-blog__content__caption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.maat-single-blog__content__caption__title{
+    margin: 0 2rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Nexa Black', sans-serif !important;
+    font-style: italic;
+    margin-left: 8rem;
+}
+.maat-single-blog__content__caption__icon{
+    margin-left: 30px;
+    height: 100%;
+}
+
+.maat-card-recursos-cat__caption__icon__img{
+    position: absolute;
+    left: 40px;
+    height: 80px;
+    top: calc(50% - 40px);
+}
+
+.maat-single-blog__content__caption__icon__bg{
+    width: 100px;
+    height: 100%;
+    background-color: black;
+    transform: rotate(15deg) scale(1.5);
+    position: absolute;
+    left: 30px;
+    top: 0;
+}
+
+
+.maat-single-blog__content__box-cover{
+    margin-bottom: 3rem;
+    overflow: hidden;
 }
 
 @media (max-width: 769px){
@@ -312,16 +405,62 @@
         margin-top: 1rem;
     }
 
-    .maat-single-blog-related-post__item{
-        width: 100%;
-    }
+    .maat-blog-content__col-left{
+		width: 100%;
+	}
+
+	.maat-blog-content__col-right{
+		width: 100%;
+	}
     
 }
 
-@media (max-width: 578px){
+@media (max-width: 579px){
+    .maat-grid-blog-filter{
+		display: block !important;
+	}
+	.maat-grid-blog-posts__row{
+		padding: 10px;
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 3em;
+	}
+	
+	.maat-grid-blog-posts__col{
+		padding: 1em;
+	}
+	
+	.maat-divider{
+		padding: 1em;
+	}
+	
+	.maat-grid-blog-search{
+		margin: 2em 0 !important;
+	}
+	
+	.maat-grid-blog-posts__col__title{
+		margin-top: 5px;
+	}
+	.maat-blog-content__col.maat-blog-content__col-left{
+		width: 100% !important;
+	}
+	.maat-blog-content__col.maat-blog-content__col-right{
+		width: 100% !important;
+	}
+	.maat-single-blog__content .text-aux{
+		padding: 3em !important;
+	}
+	.text-aux::before{
+		left: 15px !important;
+	}
+
+    .blog  .page-header .entry-title, .site-footer .footer-inner, .site-footer:not(.dynamic-footer), .site-header .header-inner, .site-header:not(.dynamic-header), body:not([class*=elementor-page-]) .site-main{
+		padding: 0px !important;
+	}
+
     .maat-blog-content__col.maat-blog-content__col-right{
         background-color: #f8f8f8;
         margin-bottom: 1rem;
+        order: 3;
     }
 
     .maat-heading-blog__entry__title{
@@ -334,5 +473,59 @@
 
     .maat-single-blog__content p{
         font-size: 20px;
+    }
+
+    .search-form{
+		width: 85% !important;
+	}
+
+    .maat-grid-blog-filter__filter__label{
+		display: none;
+	}
+	
+	.maat-grid-blog-filter__filter__select{
+		margin-top: 1em;
+	}
+
+	.maat-grid-blog-posts{
+		padding: 0px 15px;
+	}
+	
+	.maat-blog-content__col.maat-blog-content__col-right{
+		margin-bottom: 0;
+	}
+
+    .maat-single-blog-share__icons .maat-single-blog-share__icons__links{
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+    }
+
+    .maat-single-blog-share__icons .maat-single-blog-share__icons__links i{
+        font-size: 20px;
+    }
+
+    .maat-single-blog-share__icons .maat-single-blog-share__icons__links img{
+        width: 20px;
+    }
+
+    .maat-single-blog__content__caption__title{
+        font-size: 20px;
+        margin-left: 3rem;
+    }
+
+    .maat-card-recursos-cat__caption__icon__img{
+        height: 60px;
+        top: calc(50% - 30px);
+        left: 20px;
+    }
+
+    .maat-single-blog__content__caption__icon__bg{
+        width: 60px;
+        left: 20px;
+    }
+
+    .maat-single__related-post{
+        order: 2;
     }
 }
