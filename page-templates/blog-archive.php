@@ -1,3 +1,7 @@
+<?php 
+/* Template Name: Blog Archive */ 
+?>
+
 <?php
 /**
  * The template for displaying archive pages.
@@ -8,15 +12,15 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+get_header();
 ?>
-<main id="content" class="site-main maat-blog-main" role="main">
+<main id="content" class="site-main maat-blog-main maat-blog__page-template" role="main">
     <?php $archive_title = get_the_archive_title();
     ?>
 
     <?php 
-        $page = get_page_by_path( 'blog');
-        $bg = get_the_post_thumbnail_url($page->ID, 'full');
-        echo do_shortcode('[maat_heading_blog title="'.$archive_title.'" background="'.$bg.'"]');
+        $bg = get_the_post_thumbnail_url();
+        echo do_shortcode('[maat_heading_blog title="'.get_the_title().'" background="'.$bg.'"]');
     ?>
 
     <div class="maat-container">
@@ -24,16 +28,27 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="maat-grid-blog-search">
                 <?php get_search_form(); ?>
             </div>
+
+            <!-- START QUERY -->
+            <?php 
+                $args = array(
+                    'post_type' => 'post',
+                    'orderby' => $_GET['orderby'],
+                    'paged' => get_query_var( 'paged' )
+                );
+
+                $query = new WP_Query($args);
+            if($query->have_posts()): ?>
             <div class="maat-grid-blog-filter">
                 <div class="maat-grid-blog-filter__view">
+                <!-- SHOW X-XX OF XX  -->
                 <?php
-                    global $wp_query;
-                    $pagenum = $wp_query->query_vars['paged'] < 1 ? 1 : $wp_query->query_vars['paged'];
-                    $first = ( ( $pagenum - 1 ) * $wp_query->query_vars['posts_per_page'] ) + 1;
-                    $last = $first + $wp_query->post_count - 1;
-                    $text_number_posts = "Mostrando <b> $first - $last </b> de <b>$wp_query->found_posts</b>";
+                    $pagenum = $query->query_vars['paged'] < 1 ? 1 : $query->query_vars['paged'];
+                    $first = ( ( $pagenum - 1 ) * $query->query_vars['posts_per_page'] ) + 1;
+                    $last = $first + $query->post_count - 1;
+                    $text_number_posts = "Mostrando <b> $first - $last </b> de <b>$query->found_posts</b>";
                 ?>
-                    <span><?php echo $text_number_posts ?></span>
+                <span><?php echo $text_number_posts ?></span>
                 </div>
                 <form action="" method="GET" id="maat-filter-form">
                     <div class="maat-grid-blog-filter__filter">
@@ -49,10 +64,11 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="maat-divider">
                 <hr class="maat-grid-blog__divider">
             </div>
+            
             <div class="maat-grid-blog-posts">
                 <?php
-                while ( have_posts() ) {
-                    the_post();
+                while ( $query->have_posts() ) {
+                    $query->the_post();
                     $post_link = get_permalink();
                     $post_date = get_the_date();
                     $post_author_fn = get_the_author_meta('first_name');
@@ -135,22 +151,20 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </article>
                 <?php } ?>
             </div>
+            <?php 
+            wp_reset_query();
+            endif; ?>
            
         </div>
 
         <div class="maat-blog-pagination">
             <?php
-                the_posts_pagination( array(
-                    'mid_size' => 2,
-                    'prev_text' => __( '<span class="arrows"><i class="fa-solid fa-angle-left"></i></span>', 'textdomain' ),
-                    'next_text' => __( '<span class="arrows"><i class="fa-solid fa-angle-right"></i></span>', 'textdomain' ),
-                ) );
-            
+                echo my_pagination(array("query" => $query));
             ?>
         </div>
-
-        <?php wp_link_pages(); ?>
-        
     </div>
 	
 </main>
+
+<?php
+get_footer();

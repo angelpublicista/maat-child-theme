@@ -15,7 +15,8 @@ get_header();
     ?>
 
     <?php 
-        $bg = get_stylesheet_directory_uri() . "/assets/img/bg-recursos.png";
+        $page = get_page_by_path( 'recursos');
+        $bg = get_the_post_thumbnail_url($page->ID, 'full');
         echo do_shortcode('[maat_heading_blog title="'.$archive_title.'" background="'.$bg.'" style="style-2"]'); 
     ?>
 
